@@ -19,7 +19,7 @@ $ git clone https://github.com/jaoa12or/OpenMpi-Singularity-OpenFoam.git
 ```
 Cuya estructura es la siguiente:
 ```
-practica
+OpenMpi-Singularity-OpenFoam
 ├─ .gitignore
 ├─ README.md
 ├─ Vagrantfile
