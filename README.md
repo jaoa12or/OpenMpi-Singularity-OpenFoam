@@ -6,11 +6,11 @@ El objetivo de de este repositorio es ofrecer una implementación para ejecutar 
 
 Con la finalidad de llevar a cabo el objetivo principal del proyecto, se utilizó una herramienta desarrollada por el usuario Fatih Ertinaz de github, en el repositorio [fertinaz/Singularity-Openfoam](https://github.com/fertinaz/Singularity-Openfoam), la cual implementa una imagen de Singularity que contiene openFOAM, y permite la ejecución de proyectos por medio de un contenedor.
 
-Para lograr un correcto acoplamiento de la herramienta, se fabricaron algunos scripts incluídos en este repositorio, los cuales se encargan del aprovisionamiento de la misma y sus dependencias, dentro del entorno donde se ejecuta el contenedor, que en este caso, serán dos máquinas virtuales con el sistema operativo linux, en su distribución Centos 8, contruídas con VirtualBox y provisionadas por medio de Vagrant.
+Para lograr un correcto acoplamiento de la herramienta, se fabricaron algunos scripts incluídos en este repositorio, los cuales se encargan del aprovisionamiento de la misma y sus dependencias, dentro del entorno donde se ejecuta el contenedor, que en este caso, serán dos máquinas virtuales con el sistema operativo linux, en su distribución Centos 8, contruídas con `VirtualBox` y provisionadas por medio de `Vagrant`.
 
 ## Puesta en marcha
 
-Se recomienda para la reproducción de la solución implementada, contar con una distribución de linux que soporte las librerías `nfs-common` y `nfs-kernel-server`, que serán necesarias para el montaje del sistema de archivos compartidos. También es necesario contar con la instalación de VirtualBox y Vagrant en la máquina.
+Se recomienda para la reproducción de la solución implementada, contar con una distribución de linux que soporte las librerías `nfs-common` y `nfs-kernel-server`, que serán necesarias para el montaje del sistema de archivos compartidos. También es necesario contar con la instalación de `VirtualBox` y `Vagrant` en la máquina.
 
 Una vez contamos con esto, podemos descargar los archivos del repositorio.
 
@@ -30,7 +30,7 @@ OpenMpi-Singularity-OpenFoam
    └─ nodes
 
 ```
-Una vez descargada la carpeta, se debe ingresar a ella y correr el comando vagrant up, el cual inicia el despliegue y aprovisionamiento de las máquinas virtuales de VirtualBox que utilizaremos. El proceso tarda alrededor de 15 minutos. Durante el proceso de despliegue, es posible que se requiera el ingreso de las credenciales de la máquina, para realizar acondicionamientos adicionales.
+Una vez descargada la carpeta, se debe ingresar a ella y correr el comando vagrant up, el cual inicia el despliegue y aprovisionamiento de las máquinas virtuales de `VirtualBox` que utilizaremos. El proceso tarda alrededor de 15 minutos. Durante el proceso de despliegue, es posible que se requiera el ingreso de las credenciales de la máquina, para realizar acondicionamientos adicionales.
 
 Luego de desplegadas las máquinas, debemos ingresar por medio de ssh para realizar una configuración adicional, la cual nos permitirá el paso de mensajes por medio de ssh sin necesidad de una contraseña entre las máquinas, condición necesaria para el correcto funcionamiento de Open Mpi.
 
