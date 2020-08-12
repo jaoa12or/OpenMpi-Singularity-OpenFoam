@@ -1,0 +1,13 @@
+# descomentar la línea “PasswordAuthentication yes” en ambas máquinas
+sudo vi /etc/ssh/ssh_config 
+# reiniciar ssh en ambas máquinas
+sudo service sshd restart
+# generar clave en ambas máquinas
+ssh-keygen 
+# mostrar key en ambas máquinas
+cat ~/.ssh/id_rsa.pub
+# pegar clave en ambas máquinas
+sudo vi ~/.ssh/authorized_keys
+# finger prints en ambas máquinas
+ssh vagrant@192.168.50.12
+ssh vagrant@192.168.50.13
